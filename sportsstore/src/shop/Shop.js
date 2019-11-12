@@ -7,6 +7,10 @@ import {ProductList} from "./ProductList";
 //added a CartSummary to the content rendered by the Shop component, which will
 // ensure that details of the user’s selections are shown above the list of products
 import {CartSummary} from "./CartSummary";
+import { ProductPageConnector } from "./ProductPageConnector";
+import { PaginationControls } from "../PaginationControls";
+
+const ProductPages = ProductPageConnector(PaginationControls);
 
 //The new Route handles the /shop/cart URL by displaying the CartDetails component, which receives
 // props from both the data store and the routing system
@@ -28,6 +32,7 @@ export class Shop extends Component {
                     <CategoryNavigation baseUrl="/shop/products" categories={this.props.categories}/>
                 </div>
                 <div className="col-9 p-2">
+                    <ProductPages />
                      <ProductList products={ this.props.products }
                         addToCart={ this.handleAddToCart } />
                  </div>
