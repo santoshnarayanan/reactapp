@@ -1,3 +1,11 @@
+//To provide the user with a detailed view of their selections added CartDetails.js
+
+//The CartDetails component presents a table to the user, along with Link components that return to
+// the product list or navigate to the /shop/checkout URL, which starts the checkout process
+
+//The CartDetails component relies on a CartDetailsRows component to display details of the user’s
+// product selection
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { CartDetailsRows } from "./CartDetailsRows";

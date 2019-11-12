@@ -1,3 +1,4 @@
+//creating data store. This will be displayed on UI
 export const data={
     categories:["Watersports","Soccer","Chess","Running"],
     products:[

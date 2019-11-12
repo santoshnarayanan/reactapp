@@ -1,3 +1,11 @@
+//The render method must return a single top-level element, which is inserted into the HTML in place of
+// the component’s element when the HTML document is generated.
+
+// It isn’t always possible to return a single HTML element without disrupting the content layout,
+// such as in this case - where multiple table rows are required. For these situations, the React.Fragment
+// element is used. This element is discarded when the content is processed and the elements it contains
+// are added to the HTML document.
+
 import React, { Component } from "react";
 export class CartDetailsRows extends Component {
     handleChange = (product, event) => {

@@ -1,4 +1,4 @@
-//create web service
+//consume data from web service
 module.exports  = function () {
     return {
         categories:["Watersports","Soccer","Chess"],

@@ -1,8 +1,15 @@
+//To bring together the product table and the category buttons, I added a file called Shop.js to the
+// src/shop folder
+
 import React, { Component } from "react";
 import { CategoryNavigation} from "./CategoryNavigation";
 import {ProductList} from "./ProductList";
+//added a CartSummary to the content rendered by the Shop component, which will
+// ensure that details of the user’s selections are shown above the list of products
 import {CartSummary} from "./CartSummary";
 
+//The new Route handles the /shop/cart URL by displaying the CartDetails component, which receives
+// props from both the data store and the routing system
 export class Shop extends Component {
     handleAddToCart = (...args) => {
         this.props.addToCart(...args);

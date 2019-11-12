@@ -1,3 +1,8 @@
+//The ProductList component generates HTML
+// content that includes the value of each product’s name, price, and description properties, but it doesn’t
+// have knowledge of how those products are defined in the application or whether they have been defined
+// locally or retrieved from a remote server
+
 import React, {Component} from "react";
 export class ProductList extends Component{
     render(){
@@ -14,6 +19,7 @@ export class ProductList extends Component{
                 </h4>
                 <div className="card-text bg-white p-1">
                     {p.description}
+                    /*Adding a Button in the ProductList */
                    <button className="btn btn-success btn-sm float-right"
                             onClick={ () => this.props.addToCart(p) } >
                                 Add To Cart

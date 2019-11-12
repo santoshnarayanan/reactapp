@@ -1,9 +1,13 @@
+//Creating the Data Store Actions and Action Creators
+// Actions are objects that are sent to the data store to make changes to the data it contains
+
+//Extending the Data Store
 export const DataTypes = {
     PRODUCTS: "products",
     CATEGORIES: "categories"
 }
 
-// single action performed called data_load
+// different action types are added-
 export const ActionTypes = {
     DATA_LOAD: "data_load",
     CART_ADD: "cart_add",
