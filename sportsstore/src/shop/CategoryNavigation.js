@@ -10,10 +10,15 @@ import {ToggleLink} from "../ToggleLink";
 
 //Using ToggleLinks in the CategoryNavigation
 
+
+//The routing components require a corresponding change to the All category button so
+// that it is highlighted when no category has been selected, as shown in Listing 6-15.
 export class CategoryNavigation extends Component{
     render(){
         return <React.Fragment>
-            <ToggleLink to={this.props.baseUrl} exact = {true}>All</ToggleLink>
+            <ToggleLink to={ `${this.props.baseUrl}/all` } exact={ false }>
+                All
+            </ToggleLink>
             {this.props.categories && this.props.categories.map(cat =>
                 <ToggleLink key={cat} to = {`${this.props.baseUrl}/${cat.toLowerCase()}`}>
                     {cat}
