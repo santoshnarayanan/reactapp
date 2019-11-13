@@ -4,12 +4,14 @@
 //Extending the Data Store
 export const DataTypes = {
     PRODUCTS: "products",
-    CATEGORIES: "categories"
+    CATEGORIES: "categories",
+    ORDERS: "orders"
 }
 
 // different action types are added-
 export const ActionTypes = {
     DATA_LOAD: "data_load",
+    DATA_STORE: "data_store",
     DATA_SET_SORT_PROPERTY: "data_set_sort",
     DATA_SET_PAGESIZE: "data_set_pagesize",
     CART_ADD: "cart_add",
